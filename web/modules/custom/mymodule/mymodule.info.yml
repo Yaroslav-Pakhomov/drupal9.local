@@ -1,0 +1,43 @@
+# Название модуля
+name: My Module
+
+# Описание модуля
+description: 'Description of the module "My Module".'
+
+#  Группы, где расположен модуль
+package: Custom
+
+# Тип "расширения" drupal
+type: module
+
+# Версия ядра для которого модуль.
+core: 8.x
+
+#  Версии ядра совместимые с темой оформления
+core_version_requirement: ^8 || ^9
+
+# Версия модуля.
+version: 1.0
+
+#  Список модулей, от которых зависит данный модуль
+dependencies:
+  - drupal:link
+  - drupal:views
+  - paragraphs:paragraphs
+  - webform:webform (>=8.x-5.x)
+
+#  Список зависимостей, необходимы для тестирования модуля при помощи DrupalCI
+test_dependencies:
+  - drupal:image
+
+# Для кнопки перехода в настройки
+configure: mymodule.settings
+
+# Минимальная версии PHP необходимая для работы модуля
+php: 5.6
+
+# Стабильность модуля
+#lifecycle: stable
+
+# Отображение модуля в списке модулей
+hidden: false
