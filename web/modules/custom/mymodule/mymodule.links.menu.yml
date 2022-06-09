@@ -10,3 +10,19 @@ mymodule.mypage2:
   parent: system.admin_config_development
   #Вес ссылки в меню
   weight: 10
+
+
+#  Добавление данные для MyModule в разделе конфигурации в новой контейнере "Custom settings" в меню "Управление"
+mymodule.admin_config_custom:
+  title: 'Custom settings'
+  route_name: mymodule.admin_config_custom
+  parent: system.admin_config
+  description: 'Custom panel'
+  weight: -10
+
+mymodule.mypage3:
+  title: 'My Module admin (custom)'
+  description: 'My Module page for admin page'
+  route_name: mymodule.mypage3
+  parent: mymodule.admin_config_custom
+  weight: 10

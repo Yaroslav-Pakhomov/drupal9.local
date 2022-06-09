@@ -780,3 +780,9 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_SluYu1dwlwWnHytMEzv1pDnAYgvtLuELzcBrwnbneY-EUorK0zLtl5Qs5PqhEQILAJY-m2rHlw/sync';
+
+// http://www.example.com/core/rebuild.php - сброс кэша
+$settings['rebuild_access'] = TRUE;
+
+// Показ ошибок
+$config['system.logging']['error_level'] = 'verbose';

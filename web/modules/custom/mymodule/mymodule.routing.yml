@@ -22,7 +22,28 @@ mymodule.mypage:
 mymodule.mypage2:
   path: '/admin/config/development/mymodule'
   defaults:
-    _title: 'Admin Hello World'
+    _title: 'Admin My Module'
     _controller: '\Drupal\mymodule\Controller\MyModuleController::myModule'
     requirements:
-      _permission: 'view content,access content,access administration pages'
+      _permission: 'access administration pages'
+
+
+#  Страница MyModule в разделе конфигурации в новой контейнере "Custom settings"
+#Наш новый раздел на панели конфигурации
+mymodule.admin_config_custom:
+  path: '/admin/config/custom'
+  defaults:
+  #Контроллер для таких разделов уже определен в модуле system
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Custom settings'
+  requirements:
+    _permission: 'access administration pages'
+
+#Добавляем новый маршрут для страницы MyModule
+mymodule.mypage3:
+  path: '/admin/config/custom/mymodule'
+  defaults:
+    _title: 'Admin Custom My Module'
+    _controller: '\Drupal\mymodule\Controller\MyModuleController::myModule'
+  requirements:
+    _permission: 'access administration pages'
