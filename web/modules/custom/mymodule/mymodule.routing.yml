@@ -1,14 +1,28 @@
-# Первым делом объявляется машинное имя роута. Оно составляетсям из:
+# Первым делом объявляется машинное имя роута. Оно составляется из:
 # название_модуля.машинное_название_роута.
 mymodule.mypage:
-  # Указываем путь роута, с лидирующим слешем.
+  # Указываем путь роута, с лидирующим слэшем.
   path: '/mymodule'
   # Значения по умолчанию
   defaults:
     # Функция контроллера отвечающая за содержимое.
     _controller: '\Drupal\mymodule\Controller\MyModuleController::myModule'
+    # Заголовок страницы на английском языке
+    _title: 'My Module Title'
+
   # В данном разделе указываются необходимые требования для роута.
   requirements:
     # Мы будем показывать страницу только тем, у кого есть права на просмотр
     # содержимого.
-    _permission: 'view content'
+    #Новые права доступа
+    _permission: 'view mymodule'
+
+
+# Новый путь
+mymodule.mypage2:
+  path: '/admin/config/development/mymodule'
+  defaults:
+    _title: 'Admin Hello World'
+    _controller: '\Drupal\mymodule\Controller\MyModuleController::myModule'
+    requirements:
+      _permission: 'view content,access content,access administration pages'

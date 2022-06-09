@@ -1,0 +1,6 @@
+# Системное название новых прав доступа
+view mymodule:
+  title: 'View mymodule'
+  description: 'View test page "My Module".'
+  # Опция указывает на то, связаны ли данные права с безопасностью сайта
+  restrict access: TRUE

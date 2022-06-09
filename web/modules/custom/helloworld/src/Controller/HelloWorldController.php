@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types = 1);
+
 /**
  * @file
  * Contains \Drupal\helloworld\Controller\HelloWorldController.
@@ -14,21 +17,22 @@
  * Пространство имен нашего контроллера. Обратите внимание что оно схоже с тем
  * что описано выше, только опускается название нашего класса.
  */
+
 namespace Drupal\helloworld\Controller;
 
 /**
- * Используем друпальный класс ControllerBase. Мы будем от него наследоваться,
- * а он за нас сделает все обязательные вещи которые присущи всем контроллерам.
+ * Используем друпальный класс ControllerBase.
  */
+
 use Drupal\Core\Controller\ControllerBase;
 
 /**
  * Объявляем наш класс-контроллер.
  */
-class HelloWorldController extends ControllerBase {
+class HelloWorldController extends ControllerBase
+{
 
   /**
-   * {@inheritdoc}
    *
    * В Drupal 8 очень многое строится на renderable arrays и при отдаче
    * из данной функции содержимого для страницы, мы также должны вернуть

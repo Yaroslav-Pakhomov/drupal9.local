@@ -11,10 +11,10 @@ package: Custom
 type: module
 
 # Версия ядра для которого модуль.
-core: 8.x
+# core: 8.x
 
 #  Версии ядра совместимые с темой оформления
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^7 || ^8 || ^9
 
 # Версия модуля.
 version: 1.0
@@ -23,8 +23,8 @@ version: 1.0
 dependencies:
   - drupal:link
   - drupal:views
-  - paragraphs:paragraphs
-  - webform:webform (>=8.x-5.x)
+#  - paragraphs:paragraphs
+#  - webform:webform (>=8.x-5.x)
 
 #  Список зависимостей, необходимы для тестирования модуля при помощи DrupalCI
 test_dependencies:

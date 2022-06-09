@@ -1,0 +1,12 @@
+# Создаём кнопку в разделе "Конфигурация" контейнер "Разработка"
+mymodule.mypage2:
+  #Заголовок пункта меню
+  title: 'My Module admin'
+  #Описание пункта меню
+  description: 'My Module page for admin page'
+  #Маршрут (определяет путь ссылки)
+  route_name: mymodule.mypage2
+  #родительский маршрут (system.admin_config_development - определен в модуле system)
+  parent: system.admin_config_development
+  #Вес ссылки в меню
+  weight: 10

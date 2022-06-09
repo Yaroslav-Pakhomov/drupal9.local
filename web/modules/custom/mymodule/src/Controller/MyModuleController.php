@@ -13,16 +13,16 @@ declare(strict_types = 1);
  *  - HelloWorldController - название нашего класса.
  */
 
-
 /**
  * В пространстве имен контроллера опускается название нашего класса.
  */
-namespace Drupal\mymodule\Controller;
 
+namespace Drupal\mymodule\Controller;
 
 /**
  * Используем друпальный класс ControllerBase.
  */
+
 use Drupal\Core\Controller\ControllerBase;
 
 class MyModuleController extends ControllerBase
@@ -40,9 +40,9 @@ class MyModuleController extends ControllerBase
   {
     $output = [];
 
-    $output['#title'] = 'MyModule page title';
+    // $output['#title'] = 'My Module page title';
 
-    $output['#markup'] = 'My Module!';
+    $output['#markup'] = 'My Module Text!';
 
     return $output;
   }
