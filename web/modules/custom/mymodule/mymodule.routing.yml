@@ -24,8 +24,8 @@ mymodule.mypage2:
   defaults:
     _title: 'Admin My Module'
     _controller: '\Drupal\mymodule\Controller\MyModuleController::myModule'
-    requirements:
-      _permission: 'access administration pages'
+  requirements:
+    _permission: 'access administration pages'
 
 
 #  Страница MyModule в разделе конфигурации в новой контейнере "Custom settings"
@@ -33,7 +33,7 @@ mymodule.mypage2:
 mymodule.admin_config_custom:
   path: '/admin/config/custom'
   defaults:
-  #Контроллер для таких разделов уже определен в модуле system
+    #Контроллер для таких разделов уже определен в модуле system
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
     _title: 'Custom settings'
   requirements:
