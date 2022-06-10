@@ -24,6 +24,8 @@ namespace Drupal\mymodule\Controller;
  */
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\mymodule\Form\MyModuleForm;
+use Drupal\mymodule\Form\MyModuleSettingsForm;
 
 class MyModuleController extends ControllerBase
 {
@@ -43,6 +45,10 @@ class MyModuleController extends ControllerBase
     // $output['#title'] = 'My Module page title';
 
     $output['#markup'] = 'My Module Text!';
+
+    // Drupal\mymodule\Form\MyModuleForm
+    $output[] = \Drupal::formBuilder()->getForm(MyModuleForm::class);
+    $output[] = \Drupal::formBuilder()->getForm(MyModuleSettingsForm::class);
 
     return $output;
   }

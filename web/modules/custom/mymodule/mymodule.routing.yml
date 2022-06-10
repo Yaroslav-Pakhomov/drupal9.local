@@ -27,19 +27,19 @@ mymodule.mypage2:
   requirements:
     _permission: 'access administration pages'
 
-mymodule.form1:
-  path: '/admin/config/development/mymodule'
-  defaults:
-    _form: '\Drupal\mymodule\Form\MyModuleForm'
-  requirements:
-    _permission: 'access administration pages'
-
-mymodule.form2:
-  path: '/admin/config/development/mymodule'
-  defaults:
-    _form: '\Drupal\mymodule\Form\MyModuleSettingsForm'
-  requirements:
-    _permission: 'access administration pages'
+#mymodule.form1:
+#  path: '/admin/config/development/mymodule'
+#  defaults:
+#    _form: '\Drupal\mymodule\Form\MyModuleForm'
+#  requirements:
+#    _permission: 'access administration pages'
+#
+#mymodule.form2:
+#  path: '/admin/config/development/mymodule'
+#  defaults:
+#    _form: '\Drupal\mymodule\Form\MyModuleSettingsForm'
+#  requirements:
+#    _permission: 'access administration pages'
 
 
 #  Страница MyModule в разделе конфигурации в новой контейнере "Custom settings"
