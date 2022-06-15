@@ -62,7 +62,7 @@ class MyModuleController extends ControllerBase
 
     $output[] = [
       'description' => [
-        '#theme' => 'my-module-templatename',
+        '#theme' => 'mymodule-templatename',
         '#varname1' => 'value varname1',
         '#varname2' => 'value varname2',
       ]
