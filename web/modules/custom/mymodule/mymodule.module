@@ -2,6 +2,22 @@
 
 declare(strict_types = 1);
 
+use JetBrains\PhpStorm\ArrayShape;
+
 /**
  * @file
  */
+
+
+#[ArrayShape([
+  'my-module-templatename' => "\null[][]"
+])]
+function my_module_theme($existing, $type, $theme, $path): array
+{
+  return [
+    'my-module-templatename' => [
+      'variables' => ['varname1' => null, 'varname2' => null],
+      // Declare all variables that you want to be able to pass to this template
+    ],
+  ];
+}
