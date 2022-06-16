@@ -10,14 +10,32 @@ use JetBrains\PhpStorm\ArrayShape;
 
 
 #[ArrayShape([
-  'my-module-templatename' => "\null[][]"
+  'mymodule_templatename' => "\null[][]"
 ])]
 function mymodule_theme($existing, $type, $theme, $path): array
 {
   return [
-    'mymodule-templatename' => [
+    'mymodule_templatename' => [
       'variables' => ['varname1' => null, 'varname2' => null],
+      // 'template'
       // Declare all variables that you want to be able to pass to this template
     ],
   ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+// function mymodule_preprocess_html(&$variables)
+// {
+//   $random_message = \Drupal::service('mymodule.random_message')->getRandomMessage();
+//   \Drupal::messenger()->addMessage($random_message);
+//   // drupal_set_message($random_message);
+// }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function mymodule_preprocess_html(&$variables) {
+  \Drupal::service('mymodule.random_drupal_message')->setRandomMessage();
 }

@@ -48,21 +48,20 @@ class MyModuleController extends ControllerBase
 
     // <p class="paragraph">При необходимости заполните одну из форм!</p>
     $output = [
-      '#type' => 'html_tag',
-      '#tag' => 'p',
-      '#value' => 'При необходимости заполните одну из форм!',
+      '#type'       => 'html_tag',
+      '#tag'        => 'p',
+      '#value'      => 'При необходимости заполните одну из форм!',
       '#attributes' => [
         'class' => ['paragraph'],
       ],
     ];
 
-    // Drupal\mymodule\Form\MyModuleForm
     $output[] = \Drupal::formBuilder()->getForm(MyModuleForm::class);
     $output[] = \Drupal::formBuilder()->getForm(MyModuleSettingsForm::class);
 
     $output[] = [
       'description' => [
-        '#theme' => 'mymodule-templatename',
+        '#theme'    => 'mymodule_templatename',
         '#varname1' => 'value varname1',
         '#varname2' => 'value varname2',
       ]

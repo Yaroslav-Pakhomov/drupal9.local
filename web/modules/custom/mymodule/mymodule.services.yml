@@ -1,0 +1,11 @@
+parameters:
+  mymodule.message_types: ['status', 'warning', 'error']
+
+services:
+  mymodule.random_message:
+    class: Drupal\mymodule\RandomMessageGenerator
+  mymodule.random_drupal_message:
+    class: Drupal\mymodule\RandomDrupalMessage
+    arguments: ['@mymodule.random_message', '%mymodule.message_types%']
+
+
