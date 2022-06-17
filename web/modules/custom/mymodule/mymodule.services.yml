@@ -7,5 +7,9 @@ services:
   mymodule.random_drupal_message:
     class: Drupal\mymodule\RandomDrupalMessage
     arguments: ['@mymodule.random_message', '%mymodule.message_types%']
+  mymodule.twig.CustomTwig:
+    class: Drupal\mymodule\CustomTwig
+    tags:
+      - { name: twig.extension }
 
 

@@ -5,7 +5,7 @@ namespace Drupal\mymodule;
 /**
  * Class RandomMessageGenerator
  *
- * @package Drupal\dummy
+ * @package Drupal\mymodule
  */
 class RandomMessageGenerator
 {
