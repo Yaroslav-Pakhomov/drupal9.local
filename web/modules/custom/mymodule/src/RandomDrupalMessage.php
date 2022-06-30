@@ -12,10 +12,10 @@ class RandomDrupalMessage
 
   // Тут мы будем хранить все возможные типы вывода сообщений для
   // drupal_set_message() из параметров сервиса.
-  private $message_types;
+  private array $message_types;
   // В данном свойстве мы будем хранить экземпляр объекта
   // RandomMessageGenerator.
-  private $random_message_generator;
+  private RandomMessageGenerator $random_message_generator;
 
   /**
    * При создании экземпляра данного объекта, сервисы автоматически передадут
@@ -35,7 +35,7 @@ class RandomDrupalMessage
   public function setRandomMessage(): void
   {
     $random_message = $this->random_message_generator->getRandomMessage();
-    $random_message_type = random_int(0, count($this->message_types));
+    $random_message_type = random_int(0, (count($this->message_types) - 1));
     \Drupal::messenger()->addMessage($random_message, $this->message_types[$random_message_type]);
     // drupal_set_message($random_message, $this->message_types[$random_message_type]);
   }

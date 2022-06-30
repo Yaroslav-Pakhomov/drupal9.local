@@ -25,3 +25,10 @@ ex_rest.delete:
   methods:  [DELETE]
   requirements:
     _access: 'TRUE'
+
+ex_rest.patch:
+  path: 'ex-rest/patch.json'
+  defaults: { _controller: '\Drupal\ex_rest\Controller\ExRestController::patch_example' }
+  methods:  [PATCH]
+  requirements:
+    _access: 'TRUE'

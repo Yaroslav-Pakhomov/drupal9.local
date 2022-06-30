@@ -1,4 +1,26 @@
+# Название модуля
 name: Example Rest API
+
+# Описание модуля
+description: Простой пример использования RESTfull API в Drupal 8, 9
+
+#  Группы, где расположен модуль
+package: Custom
+
+# Тип "расширения" drupal
 type: module
-description: Простой пример использования RESTfull API в Drupal 8
-core: 8.x
+
+#  Версии ядра совместимые с темой оформления
+core_version_requirement: ^7 || ^8 || ^9
+
+# Версия модуля.
+version: 1.0.0
+
+# Для кнопки перехода в настройки
+configure: mymodule.settings
+
+# Минимальная версии PHP необходимая для работы модуля
+php: 5.6
+
+# Отображение модуля в списке модулей
+hidden: false

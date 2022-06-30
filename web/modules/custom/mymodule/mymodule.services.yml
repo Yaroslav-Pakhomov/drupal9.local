@@ -1,5 +1,5 @@
 parameters:
-  mymodule.message_types: ['status', 'warning', 'error']
+  mymodule.message_types: ['status', 'warning']
 
 services:
   mymodule.random_message:
