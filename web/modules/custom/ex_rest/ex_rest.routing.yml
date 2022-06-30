@@ -1,0 +1,27 @@
+ex_rest.get:
+  path: 'ex-rest/get.json'
+  defaults: { _controller: '\Drupal\ex_rest\Controller\ExRestController::get_example' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+ex_rest.put:
+  path: 'ex-rest/put.json'
+  defaults: { _controller: '\Drupal\ex_rest\Controller\ExRestController::put_example' }
+  methods:  [PUT]
+  requirements:
+    _access: 'TRUE'
+
+ex_rest.post:
+  path: 'ex-rest/post.json'
+  defaults: { _controller: '\Drupal\ex_rest\Controller\ExRestController::post_example' }
+  methods:  [POST]
+  requirements:
+    _access: 'TRUE'
+
+ex_rest.delete:
+  path: 'ex-rest/delete.json'
+  defaults: { _controller: '\Drupal\ex_rest\Controller\ExRestController::delete_example' }
+  methods:  [DELETE]
+  requirements:
+    _access: 'TRUE'

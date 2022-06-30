@@ -1,0 +1,4 @@
+name: Example Rest API
+type: module
+description: Простой пример использования RESTfull API в Drupal 8
+core: 8.x
